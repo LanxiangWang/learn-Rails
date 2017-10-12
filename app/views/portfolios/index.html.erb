@@ -1,9 +1,10 @@
 <h1>Portfolio Items</h1>
 
-<a href="portfolios/new">Create New Item</a>
+<!-- <a href="portfolios/new">Create New Item</a>
+ -->
 <%= link_to "Create New Item", new_portfolio_path %>
 <% @portfolio_items.each do |x| %>
-  <p><%= x.title %></p>
+  <p><%= link_to x.title, portfolio_path(x) %></p>
   <p><%= x.subtitle %></p>
   <p><%= x.body %></p>
   <p><%= image_tag x.thumb_image unless x.thumb_image.nil? %></p>
