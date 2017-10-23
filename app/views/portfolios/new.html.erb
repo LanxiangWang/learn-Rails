@@ -1,4 +1,5 @@
 <h1>Create a new Portfolio Item</h1>
+
 <%= form_for(@portfolio_items) do |form| %>
   <div class="field">
     <%= form.label :title %>
@@ -14,6 +15,15 @@
     <%= form.label :body %>
     <%= form.text_area :body %>
   </div>
+
+  <ul class="field">
+    <%= form.fields_for :technologies do |technology_form| %>
+      <li>
+        <%= technology_form.label :name %>
+        <%= technology_form.text_field :name %>
+    </li>
+  </ul>
+  <% end %>
 
   <div class="actions">
     <%= form.submit %>
