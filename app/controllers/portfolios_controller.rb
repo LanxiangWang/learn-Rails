@@ -4,8 +4,8 @@ class PortfoliosController < ApplicationController
   end
 
   def new
-    @portfolio_items = Portfolio.new
-    2.times { @portfolio_items.technologies.new }
+    @portfolio_item = Portfolio.new
+    2.times { @portfolio_item.technologies.new }
   end
 
   def create
@@ -25,7 +25,8 @@ class PortfoliosController < ApplicationController
   end
 
   def edit
-    @portfolio_items = Portfolio.find(params[:id])
+    @portfolio_item = Portfolio.find(params[:id])
+    
   end
 
   def update
