@@ -1,34 +1,20 @@
 
 </head>
-
 <body>
-
-  
-        
-
-        <main role="main" class="inner cover">
-          <h1 class="cover-heading">Cover your page.</h1>
-          <p class="lead">Cover is a one-page template for building simple and beautiful home pages. Download, edit the text, and add your own fullscreen background photo to make it your own.</p>
-          <p class="lead">
-            <a href="#" class="btn btn-lg btn-secondary">Learn more</a>
-          </p>
-        </main>
-
-        <footer class="mastfoot">
-          <div class="inner">
-            <p>Cover template for <a href="https://getbootstrap.com/">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
-          </div>
-        </footer>
+  <main role="main" class="inner cover">
+    <h1 class="cover-heading">Welcome!</h1>
+    <p class="lead">This is Lanxiang's website powered by Ruby on Rails 5.</p>
+    <br>
+    <p class="lead">
+      <a href="<%= about_path %>" class="btn btn-lg btn-secondary">About Me</a>
+    </p>
+  </main>
 
 
 
 
 
 
-<h1>Hi, <%= current_user.first_name if current_user %></h1>
-<h1>Blog Posts</h1>
-<% @posts.each do |post| %>
-<p><%= post.title %></p>
-<% end %>
-<h1>Skills</h1>
-<%= @skills.inspect %>
+
+
+

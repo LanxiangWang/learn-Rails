@@ -1,10 +1,11 @@
 class PagesController < ApplicationController
   def home
-    @posts = Blog.all
-    @skills = Skill.all
+    @active = "active"
+
   end
 
   def about
+    @active_about = "active"
   end
 
   def contact
