@@ -1,21 +1,67 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title><%= @page_title %></title>
     <%= csrf_meta_tags %>
-
     <%= stylesheet_link_tag    'blogs', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+
+    <header>
+      <!-- start of nav-bar -->
+      <div class="blog-masthead">
+        <div class="container">
+          <nav class="nav">
+            <a class="nav-link active" href="#">Home</a>
+            <a class="nav-link" href="#">New features</a>
+            <a class="nav-link" href="#">Press</a>
+            <a class="nav-link" href="#">New hires</a>
+            <a class="nav-link" href="#">About</a>
+          </nav>
+        </div>
+      </div>
+      <!-- end of nav-bar -->
+
+      <!-- start of header -->
+      <div class="blog-header">
+        <div class="container">
+          <h1 class="blog-title">The Bootstrap Blog</h1>
+          <p class="lead blog-description">An example blog template built with Bootstrap.</p>
+        </div>
+      </div>
+      <!-- end of header -->
+    </header>
+
+    <main role="main" class="container">
+
+      <div class="row">
+
+        <%= yield %>
+
+
+      </div><!-- /.row -->
+
+    </main><!-- /.container -->
+
+    <footer class="blog-footer">
+      <p>Blog template built for <a href="https://getbootstrap.com/">Bootstrap</a> by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+      <p>
+        <a href="#">Back to top</a>
+      </p>
+    </footer>
+
+
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
 
     
     <%= login_helper %>
     
-    <%= yield %>
+    
 
     <%= render 'shared/nav', location: 'bottom' %>
 
