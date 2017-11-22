@@ -158,6 +158,19 @@ body {
   .masthead,
   .mastfoot,
   .cover-container {
-    width: 55rem;
+    width: 60rem;
   }
 }
+
+/*
+ * Globals
+ */
+
+ .card_color_lanxiang {
+    color: black;
+    text-align: left;
+ }
+
+  .auth-link a {
+    color: black;
+ }
