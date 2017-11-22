@@ -1,7 +1,7 @@
 class PagesController < ApplicationController
   def home
     @active = "active"
-
+    
   end
 
   def about
