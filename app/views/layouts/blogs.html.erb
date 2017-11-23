@@ -30,8 +30,11 @@
 
       <div class="row">
 
-        <%= yield %>
-
+        <div class="col-sm-8 blog-main">
+          <%= yield %>
+        </div>
+        <%= render 'shared/blog_sidebar' %>
+        
 
       </div><!-- /.row -->
 
