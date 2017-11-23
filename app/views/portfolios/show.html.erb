@@ -1,17 +1,26 @@
-<p id="notice"><%= notice %></p>
+<div class="container">
+  <div class="row">
+    <div class="col-md-7">
+      <%= image_tag @portfolio_items.main_image %>
+    </div>
 
-<p>
-  <strong>Title:</strong>
-  <%= @portfolio_items.title %>
-</p>
+    <div class="col-md-5">
+      <%= @portfolio_items.title %>
+      <hr>
+      <%= @portfolio_items.subtitle %>
+      <hr>
+      <%= @portfolio_items.body %>
+      <hr>
+      <h3>Technologies Used:</h3>
 
-<p>
-  <strong>Body:</strong>
-  <%= @portfolio_items.body %>
-</p>
+      <% @portfolio_items.technologies.each do |t| %>
+        <p><%= t.name %></p>
+      <% end %>
 
-<hr>
-<%= session[:source] %>
+    </div>
+  </div>
+</div>
+
 
 
 
