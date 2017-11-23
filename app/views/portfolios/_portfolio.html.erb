@@ -1,7 +1,10 @@
-<p><%= link_to portfolio.title, portfolio_show_path(portfolio) %></p>
-<p><%= portfolio.subtitle %></p>
-<p><%= portfolio.body %></p>
-<p><%= image_tag portfolio.thumb_image unless portfolio.thumb_image.nil? %></p>
-<%= link_to "Edit", edit_portfolio_path(portfolio.id) %>
-<%= link_to "Delete", portfolio_path(portfolio), method: :delete, data: {confirm: 'Are you sure?'} %>
-<br/><br/><br/>
+<div class="card">
+  <%= image_tag portfolio.thumb_image unless portfolio.thumb_image.nil? %>
+  <p class="card-text">
+    <span><%= link_to portfolio.title, portfolio_show_path(portfolio) %></span>
+    <span><%= portfolio.subtitle %></span>
+    <span><%= portfolio.body %></span>
+  </p>
+</div>
+
+
