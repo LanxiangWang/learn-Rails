@@ -1,12 +1,8 @@
 <header class="masthead clearfix">
   <div class="inner">
     <h3 class="masthead-brand">Lanxiang's Home</h3>
-    <nav class="nav nav-masthead">
-      <a class="nav-link <%= @active %>" href="<%= root_path %>">Home</a>
-      <a class="nav-link <%= @active_about %>" href="<%= about_path %>">About Me</a>
-      <a class="nav-link " href="<%= contact_path %>">Contact</a>
-      <a class="nav-link " href="<%= blogs_path %>">Blogs</a>
-      <a class="nav-link " href="<%= portfolios_path %>">Portfolios</a>
+    <nav class="nav nav-masthead home_nav">
+      <%= nav_helper 'nav-link', 'span' %>
       <%= login_helper "nav-link" %>
     </nav>
   </div>
